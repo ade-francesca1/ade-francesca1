@@ -1,0 +1,47 @@
+
+MAIN PROGRAM -
+
+1) Check if the correct amount of arguments were entered, if not call the usage() function and exit the program.
+
+2) Create a list for the abbreviated names of all the months, a dictionary for the amount of days in each month, and assign the argument from the command line to a variable.
+
+3) Remove all non-digit characters from the variable holding the first data item using the sanitize() function. This will return the data with only the information you want in it.
+
+4) Use the size_check() function to make sure the data is the correct length which is 8 characters long, you will either get a return of true or false, If false print an error explaining the problem.
+
+5) Extract the year, month, and day from the sanitized input data.
+
+6) Check to make sure the year (1900,9999) month, and day are all valid entries within their correct ranges using the range_check() function. Call the leap_year() function to make sure the day is valid. If range_check() returns with false for year, month, or day print an error explaining the problem.
+
+7) Create the output in the required format (mmm dd, yyyy) and assign it to a variable. Use the list of months to convert the 2-digit month to the corresponding three letter abbreviated month name.
+
+8) Print a statement explaining the output and output the variable you just created.
+
+
+
+FUNCTIONS-
+
+leap_year()
+	This function will take a year in 'YYYY' format and return true if the year entered was a leap year and false if it is not.
+
+
+sanitize()
+	This function will take two string objects, the first will be the data that needs to be sanitized, and the second will contain the letters that are allowed to stay in the data. The function will return the data entered in the first object with only the letters from the second object.
+
+
+size_check()
+	This function will take the sanitized data and the expected number of items (8 in this case) as an integer. It will return True if the number of items in the data match the integer value given, if it doesn't match it will return false.
+
+range_check()
+	This function will take an integer object (yyyy,mm, or dd) and a tuple with two integer values, the first integer value indicates the lower end of the range and the second integer value indicates the higher end of the range. It will return true if the integer object falls between the two values given in the tuple, if the integer object does not fall between the two values it will return false.
+
+usage()
+	This function will not take any argument, When called it will return a string describing the usage of the script.
+
+
+	
+	
+
+
+
+	
